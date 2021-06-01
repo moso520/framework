@@ -23,7 +23,7 @@ public class WireMockStubTest {
 
         );
         wireMockServer.start();
-
+        System.out.println();
         //client配置
         configureFor("localhost",8888);
 
