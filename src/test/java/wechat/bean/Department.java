@@ -1,8 +1,8 @@
 package wechat.bean;
 
 public class Department {
-    String id;
-    String name;
-    String name_en;
-    String parentid;
+    public String id;
+    public String name;
+    public String name_en;
+    public String parentid;
 }

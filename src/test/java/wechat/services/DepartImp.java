@@ -3,12 +3,9 @@ package wechat.services;
 import io.restassured.response.Response;
 import wechat.resources.Info;
 import wechat.util.HttpUtil;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DepartImp {
