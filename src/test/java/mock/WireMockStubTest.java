@@ -15,6 +15,10 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMoc
 public class WireMockStubTest {
     @Test
     public void stubTest() throws IOException {
+        //__admin/mappings    -> get all mappings
+        //atPriority()
+
+
         //config wiremock
         WireMockServer wireMockServer = new WireMockServer(
             wireMockConfig()
@@ -44,7 +48,7 @@ public class WireMockStubTest {
                 ));
 
         stubFor(get(urlPathEqualTo("/a/b/c"))
-                .withQueryParam("id", equalTo("1")).atPriority(1)
+                .withQueryParam("id", equalTo("1")).atPriority(2)
                 .willReturn(aResponse()
                         .withBody("files/{{request.query.id}}.png")
 //                        .withBody("token:{{request.query.id}}")
@@ -59,6 +63,79 @@ public class WireMockStubTest {
                 .withQueryParam("wd", new ContainsPattern("Moso"))
                 .willReturn(aResponse().proxiedFrom("https://www.baidu.com/"))
         );
+
+        String createResponseBody = "{\n" +
+                "   \"errcode\": 0,\n" +
+                "   \"errmsg\": \"created\"\n" +
+                "}";
+        stubFor(post(urlPathMatching("create")).atPriority(3)
+                .withQueryParam("body", new ContainsPattern("Moso"))
+                .willReturn(aResponse().withBody(createResponseBody))
+        );
+
+        String htmlResponse = "<html>\n" +
+                "  <body>{\"success\":false,\"code\":0,\"desc\":\"发生未知错误，请稍后重试\"}</body>\n" +
+                "</html>";
+
+
+        stubFor(get(urlPathMatching("html/response")).willReturn(aResponse().withBody(htmlResponse))
+            );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        stubFor(get(urlPathEqualTo("/a/b/c/d"))
+                .withQueryParam("id", equalTo("1")).atPriority(1)
+                .willReturn(aResponse()
+                        .withBody("files/{{request.query.id}}.png")
+                )
+        );
+
 
 
 

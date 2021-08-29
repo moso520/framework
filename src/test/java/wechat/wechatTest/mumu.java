@@ -1,17 +1,29 @@
 package wechat.wechatTest;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.*;
+public class mumu
+{
+    private int param;
 
-import java.util.ArrayList;
+    @Factory(dataProvider = "dataMethod")
+    public  mumu(int param) {
+        this.param = param;
+    }
 
-public class mumu {
+    @DataProvider
+    public static Object[][] dataMethod() {
+        return new Object[][] { new Object[]{ 0 }, new Object[]{ 10 } };
+    }
+
     @Test
-    void update(){
-        int i = 10;
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        for (int ii = 0; ii < i; i++){
-            arrayList.add(ii);
-        }
-        System.out.println();
+    public void testMethodOne() {
+        int opValue = param + 1;
+        System.out.println("Test method one output: " + opValue);
+    }
+
+    @Test
+    public void testMethodTwo() {
+        int opValue = param + 2;
+        System.out.println("Test method two output: " + opValue);
     }
 }
