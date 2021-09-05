@@ -1,0 +1,72 @@
+{
+  "uid" : "917fddca9ce312aa",
+  "name" : "list all provinces",
+  "fullName" : "AI.Test.AgentTest.listProvinces",
+  "historyId" : "49066027e96c025fab223e7d5632b843",
+  "time" : {
+    "start" : 1630250982860,
+    "stop" : 1630250983097,
+    "duration" : 237
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "69f4b61e6ac61ba4",
+      "name" : "list all provinces",
+      "source" : "69f4b61e6ac61ba4.txt",
+      "type" : "text/plain",
+      "size" : 53
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "15216@DESKTOP-LBAFN98.ForkJoinPool-1-worker-9(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "listProvinces"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "917fddca9ce312aa.json",
+  "parameterValues" : [ ]
+}

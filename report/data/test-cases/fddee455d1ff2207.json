@@ -1,0 +1,72 @@
+{
+  "uid" : "fddee455d1ff2207",
+  "name" : "list User Packages",
+  "fullName" : "AI.Test.AgentTest.listPackages",
+  "historyId" : "ccff5a4eacc708579d899297b4fbf0af",
+  "time" : {
+    "start" : 1630250983569,
+    "stop" : 1630250983771,
+    "duration" : 202
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "ec0b908b275b1745",
+      "name" : "list all Packages",
+      "source" : "ec0b908b275b1745.txt",
+      "type" : "text/plain",
+      "size" : 936
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "15216@DESKTOP-LBAFN98.ForkJoinPool-1-worker-9(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "listPackages"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "fddee455d1ff2207.json",
+  "parameterValues" : [ ]
+}

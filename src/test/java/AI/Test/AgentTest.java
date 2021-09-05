@@ -47,5 +47,19 @@ public class AgentTest {
         Allure.addAttachment("list all provinces", listResponse.asString());
     }
 
+    @DisplayName("list all area for cabinetList")
+    @Test
+    void listCabineArea() {
+        Response listResponse = HttpUtil.get(Info.LIST_AREA);
+        Allure.addAttachment("list all area for cabinetList", listResponse.asString());
+    }
+
+    @DisplayName("list all city for cabinetList")
+    @Test
+    void listCabineCity() {
+        Response listResponse = HttpUtil.get(Info.LIST_CITY);
+        Allure.addAttachment("list all city for cabinetList", listResponse.asString());
+    }
+
 
 }

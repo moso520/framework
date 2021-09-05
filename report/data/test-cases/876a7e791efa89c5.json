@@ -1,0 +1,119 @@
+{
+  "uid" : "876a7e791efa89c5",
+  "name" : "list all provinces",
+  "fullName" : "AI.Test.AgentTest.listProvinces",
+  "historyId" : "49066027e96c025fab223e7d5632b843",
+  "time" : {
+    "start" : 1630339357234,
+    "stop" : 1630339357594,
+    "duration" : 360
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "login",
+    "time" : {
+      "start" : 1630339335805,
+      "stop" : 1630339357109,
+      "duration" : 21304
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "91d03aa018721efa",
+      "name" : "login results",
+      "source" : "91d03aa018721efa.txt",
+      "type" : "text/plain",
+      "size" : 2567
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "2e9ba1ddef2a9c44",
+      "name" : "list all provinces",
+      "source" : "2e9ba1ddef2a9c44.txt",
+      "type" : "text/plain",
+      "size" : 53
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "15444@DESKTOP-LBAFN98.ForkJoinPool-1-worker-9(13)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "listProvinces"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.AgentTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "9225b466b4773c03",
+      "status" : "passed",
+      "time" : {
+        "start" : 1630338517003,
+        "stop" : 1630338517486,
+        "duration" : 483
+      }
+    }, {
+      "uid" : "917fddca9ce312aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1630250982860,
+        "stop" : 1630250983097,
+        "duration" : 237
+      }
+    }, {
+      "uid" : "96758e61c397af6c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1630250908638,
+        "stop" : 1630250908875,
+        "duration" : 237
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "876a7e791efa89c5.json",
+  "parameterValues" : [ ]
+}
