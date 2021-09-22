@@ -3,6 +3,7 @@ package AI.util;
 import AI.Test.AgentTest;
 import AI.resources.Info;
 import AI.resources.InfoApp;
+import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import org.junit.Assert;
 import org.slf4j.Logger;
@@ -30,11 +31,12 @@ public class AppHttpUtil {
                 .then()
                 .extract()
                 .response();
+        Allure.addAttachment("api--->", url);
 //        assertAll("check response info",
 //                ()->assertEquals("200",response.path("code").toString()),
 //                ()->assertEquals("SUCCESS",response.path("message"))
 //        );
-        logger.info(response.toString());
+        logger.info(response.asString());
         return response;
     }
 
@@ -52,7 +54,8 @@ public class AppHttpUtil {
 //                ()->assertEquals("200",response.path("code").toString()),
 //                ()->assertEquals("SUCCESS",response.path("message"))
 //        );
-        logger.info(response.toString());
+        Allure.addAttachment("api--->", url);
+        logger.info(response.asString());
         return response;
     }
 
@@ -68,11 +71,12 @@ public class AppHttpUtil {
                 .then()
                 .extract()
                 .response();
+        Allure.addAttachment("api--->", url);
 //        assertAll("check response info",
 //                ()->assertEquals("200",response.path("code").toString()),
 //                ()->assertEquals("SUCCESS",response.path("message"))
 //        );
-        logger.info(response.toString());
+        logger.info(response.asString());
         return response;
     }
 
@@ -87,7 +91,8 @@ public class AppHttpUtil {
                 .then()
                 .extract()
                 .response();
-        logger.info(response.toString());
+        logger.info(response.asString());
+        Allure.addAttachment("api--->", url);
 //        assertAll("check response info",
 //                ()->assertEquals("200",response.path("code").toString()),
 //                ()->assertEquals("SUCCESS",response.path("message"))
@@ -112,7 +117,8 @@ public class AppHttpUtil {
                 .log().body()
                 .extract()
                 .response();
-        logger.info(response.toString());
+        logger.info(response.asString());
+        Allure.addAttachment("api--->", InfoApp.LOGIN);
         return response;
     }
 }

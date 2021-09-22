@@ -90,6 +90,7 @@ public class UserDetailTest {
 
     @DisplayName("swap Cabine")
     @Test
+    @Disabled
     void swapCabine() {
         Response response = AppHttpUtil.post(JsonBody.swapCabine,InfoApp.SWAP);
         Assert.assertEquals(response.path("suc").toString(),"true");

@@ -13,19 +13,19 @@ public class JsonBody {
             "}";
 
     public static String groupGrcode = "{\n" +
-            "    \"qrcode\":\"AG0901631602912\",\n" +
-            "    \"userId\":\"13989898989c06bd4ea7fb34\"\n" +
+            "    \"qrcode\":\"AG1651625239170\",\n" +
+            "    \"userId\":\"5c99d9e542cda600684bfc6a\"\n" +
             "}";
 
     public static String submitCertification = "{\n" +
-            "    \"userId\":\"13989898989c06bd4ea7fb34\",\n" +
+            "    \"userId\":\"5c99d9e542cda600684bfc6a\",\n" +
             "    \"userName\":\"Sakura1\",\n" +
             "    \"idCardNumber\":\"433127202108200003\",\n" +
             "    \"idCardFrontImg\":\"123.jpg\",\n" +
             "    \"holdIdCardImg\":\"456.jpg\"\n" +
             "}";
     public static String swapCabine = "{\n" +
-            "  \"userId\": \"13989898989c06bd4ea7fb34\",\n" +
+            "  \"userId\": \"5c99d9e542cda600684bfc6a\",\n" +
             "  \"cabinetSn\": \"H8ANBCB5L600112C\"\n" +
             "}";
 }
