@@ -2,6 +2,7 @@ package AI.resources;
 
 public class Info {
     private static final String TEST_HOST = "http://test-agent.aihuandian.net";
+    private static final String APP_HOST = "http://test-agent.aihuandian.net";
     private static final String GET_ACCESS_TOKEN = "https://qyapi.weixin.qq.com/cgi-bin/gettoken";
     private static final String TAIL = "?access_token=";
 

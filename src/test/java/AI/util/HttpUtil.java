@@ -63,7 +63,7 @@ public class HttpUtil {
                 .response();
         assertAll("check response info",
                 ()->assertEquals("200",response.path("code").toString()),
-                ()->assertEquals("SUCCESS",response.path("message"))
+                ()->assertEquals("SUCCESS",response.path("message").toString())
         );
         logger.info(response.toString());
         return response;

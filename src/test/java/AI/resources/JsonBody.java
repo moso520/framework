@@ -28,4 +28,16 @@ public class JsonBody {
             "  \"userId\": \"5c99d9e542cda600684bfc6a\",\n" +
             "  \"cabinetSn\": \"H8ANBCB5L600112C\"\n" +
             "}";
+
+
+    public static String sendSms = "{\n" +
+            " \"phone\":\""+Contact.APP_PHONE+"\",\n" +
+            " \"smsCode\":\""+Contact.SMS_DEFAULT_CODE+"\",\n" +
+            " \"operationId\":\"12\" \n" +
+            "}";
+
+    public static String checkSms = "{\n" +
+            " \"phone\":\""+Contact.APP_PHONE+"\",\n" +
+            " \"smsCode\":\""+Contact.SMS_DEFAULT_CODE+"\"\n" +
+            "}";
 }
