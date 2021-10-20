@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 代理端用户报告模块测试类
+ */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserReportTest {
     private static final Logger logger = LoggerFactory.getLogger(UserReportTest.class);

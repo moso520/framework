@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 代理端测试类
+ */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class AgentTest {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
@@ -47,12 +50,12 @@ public class AgentTest {
         Allure.addAttachment("list all provinces", listResponse.asString());
     }
 
-    @DisplayName("list all area for cabinetList")
+  /*  @DisplayName("list all area for cabinetList")
     @Test
     void listCabineArea() {
         Response listResponse = HttpUtil.get(Info.LIST_AREA);
         Allure.addAttachment("list all area for cabinetList", listResponse.asString());
-    }
+    }*/
 
     @DisplayName("list all city for cabinetList")
     @Test

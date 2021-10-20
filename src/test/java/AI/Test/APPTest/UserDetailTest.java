@@ -19,6 +19,9 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * APP测试类
+ */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UserDetailTest {
     private static final Logger logger = LoggerFactory.getLogger(UserDetailTest.class);
@@ -88,12 +91,5 @@ public class UserDetailTest {
         Allure.addAttachment("submit Certification", response.asString());
     }
 
-    @DisplayName("swap Cabine")
-    @Test
-    @Disabled
-    void swapCabine() {
-        Response response = AppHttpUtil.post(JsonBody.swapCabine,InfoApp.SWAP);
-        Assert.assertEquals(response.path("suc").toString(),"true");
-        Allure.addAttachment("swap Cabine", response.asString());
-    }
+
 }

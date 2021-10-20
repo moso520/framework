@@ -1,0 +1,38 @@
+TestSuite:
+  SmsTest:
+    - CASEID:
+        ENV: UAT
+        userid: "test001"
+        name: "王好"
+        alias: "Moso"
+        mobile: "+86 13800000000"
+
+    - caseid:
+        userid: "test001"
+        name: "王好"
+        alias: "Moso"
+        mobile: "+86 13800000000"
+
+
+  SmsTest1:
+      - CASEID:
+        ENV: UAT
+        userid: "test001"
+        name: "王好"
+        alias: "Moso"
+        mobile: "+86 13800000000"
+
+      - caseid:
+        userid: "test001"
+        name: "王好"
+        alias: "Moso"
+        mobile: "+86 13800000000"
+
+  #name1: checkSms1
+  #  - testcase: checkSms001
+  #      address: "杭州"
+  #      telephone: "杭州"
+  #
+  #  - testcase: checkSms002
+  #      address: "杭州"
+  #      telephone: "杭州"

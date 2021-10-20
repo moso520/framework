@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: AI.Test.AgentTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.433 s - in AI.Test.AgentTest
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.005 s <<< FAILURE! - in AI.Test.AgentTest
+listCabineArea  Time elapsed: 0.08 s  <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+check response info (2 failures)
+	java.lang.NullPointerException: <no message>
+	org.opentest4j.AssertionFailedError: expected: <SUCCESS> but was: <No message available>
+	at AI.Test.AgentTest.listCabineArea(AgentTest.java:53)
+

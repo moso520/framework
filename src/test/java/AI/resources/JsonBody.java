@@ -3,13 +3,13 @@ package AI.resources;
 public class JsonBody {
     public static String uploadBasicInfo = "{\n" +
             "\t\"appVersion\": \"3.4.0\",\n" +
-            "\t\"deviceId\": \"70f059078a0a97225240a99395adc54\",\n" +
-            "\t\"model\": \"V1916A\",\n" +
-            "\t\"objectId\": \"132222222227d8c680308890\",\n" +
-            "\t\"phoneManufacturer\": \"vivo\",\n" +
+            "\t\"deviceId\": \"ad606709f2d81486d3860338101e352c\",\n" +
+            "\t\"model\": \"M2007J3SC\",\n" +
+            "\t\"objectId\": \"137000010113f52da67a470e\",\n" +
+            "\t\"phoneManufacturer\": \"Xiaomi\",\n" +
             "\t\"platform\": \"android\",\n" +
             "\t\"systemVersion\": \"11\",\n" +
-            "\t\"userPhone\": \"13222222222\"\n" +
+            "\t\"userPhone\": \"13700001011\"\n" +
             "}";
 
     public static String groupGrcode = "{\n" +

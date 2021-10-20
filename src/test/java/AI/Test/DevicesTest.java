@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Devices测试类
+ */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DevicesTest {
     private static final Logger logger = LoggerFactory.getLogger(DevicesTest.class);
@@ -33,7 +36,7 @@ public class DevicesTest {
                 "   }\n" +
                 "}";
         Response response = AppHttpUtil.post(body,InfoApp.CHECK_DEVICES_VERSION);
-        Assert.assertEquals(response.path("suc").toString(),"true");
+        Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("check Cabinet Version", response.asString());
     }
 
@@ -52,7 +55,7 @@ public class DevicesTest {
                 " }\n" +
                 "}";
         Response response = AppHttpUtil.post(body,InfoApp.CHECK_DEVICES_VERSION);
-        Assert.assertEquals(response.path("suc").toString(),"true");
+        Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("check Imei Version", response.asString());
     }
 
@@ -72,7 +75,7 @@ public class DevicesTest {
                 "   }\n" +
                 "}";
         Response response = AppHttpUtil.post(body,InfoApp.CHECK_DEVICES_VERSION);
-        Assert.assertEquals(response.path("suc").toString(),"true");
+        Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("disable Cabinetsn", response.asString());
     }
 
@@ -92,7 +95,7 @@ public class DevicesTest {
                 "\t}\n" +
                 "}";
         Response response = AppHttpUtil.post(body,InfoApp.CHECK_DEVICES_VERSION);
-        Assert.assertEquals(response.path("suc").toString(),"true");
+        Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("open Imei", response.asString());
     }
 

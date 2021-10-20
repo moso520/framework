@@ -1,1 +1,0 @@
-{"suc":false,"error":{"code":7047,"prompt":"用户已通过审核，无需重新申请"}}
