@@ -14,7 +14,7 @@ public class BasePage {
 
         try {
             driver.findElement(by).click();
-            System.out.println("click success" + by);
+            System.out.println("click success " + by);
         }catch (Exception e){
             System.out.println(driver.getPageSource());
             retryTimes += 1;
@@ -37,6 +37,7 @@ public class BasePage {
 
     public void sendKeys(By by, String content){
         driver.findElement(by).sendKeys(content);
+        System.out.println("sendKeys success " + by + content);
     }
 
     public String getAttribute(By by, String element){
@@ -46,6 +47,7 @@ public class BasePage {
 
     public String getText(By by){
         String resString = driver.findElement(by).getText();
+        System.out.println("getText success " + by + resString);
         return resString;
     }
 }
