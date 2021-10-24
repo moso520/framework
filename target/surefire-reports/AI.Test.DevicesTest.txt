@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: AI.Test.DevicesTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 89.621 s <<< FAILURE! - in AI.Test.DevicesTest
+checkCabinetVersion  Time elapsed: 16.523 s  <<< ERROR!
+java.net.ConnectException: Connection timed out: connect
+	at AI.Test.DevicesTest.checkCabinetVersion(DevicesTest.java:35)
+
+openImei  Time elapsed: 21.064 s  <<< ERROR!
+java.net.ConnectException: Connection timed out: connect
+	at AI.Test.DevicesTest.openImei(DevicesTest.java:94)
+
+disableCabinetsn  Time elapsed: 21.076 s  <<< ERROR!
+java.net.ConnectException: Connection timed out: connect
+	at AI.Test.DevicesTest.disableCabinetsn(DevicesTest.java:74)
+
+checkImeiVersion  Time elapsed: 21.074 s  <<< ERROR!
+java.net.ConnectException: Connection timed out: connect
+	at AI.Test.DevicesTest.checkImeiVersion(DevicesTest.java:54)
+

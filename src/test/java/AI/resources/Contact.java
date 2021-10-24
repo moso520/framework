@@ -7,5 +7,9 @@ public class Contact {
     public static final String SMS_DEFAULT_CODE = "123456";
     public static final String DEVICES_ID = "70f059078a0a97225240a99395adc54";
 
+    public static final String MANAGER_NAME = "13261616956";
+    public static final String MANAGER_ASSWORD = "Aihuandian2021";
+    public static final String MANAGER_AUTH = "8888";
+
 
 }
