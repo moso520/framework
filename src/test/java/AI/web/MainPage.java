@@ -17,5 +17,16 @@ public class MainPage extends BasePage {
         return this;
     }
 
+    public AgentListPage toAgentList(){
+        click(By.xpath(WebInfo.AGENT_MANAGER_XPATH));
+        click(By.xpath(WebInfo.AGENT_LIST_XPATH));
+        return new AgentListPage(driver);
+    }
+
+    public UserListPage toUserList(){
+        click(By.xpath(WebInfo.USER_MANAGER_XPATH));
+        click(By.xpath(WebInfo.USER_LIST_XPATH));
+        return new UserListPage(driver);
+    }
 
 }

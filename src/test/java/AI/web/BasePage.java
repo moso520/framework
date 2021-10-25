@@ -50,4 +50,8 @@ public class BasePage {
         System.out.println("getText success " + by + resString);
         return resString;
     }
+
+    public static void quitChrome(){
+        driver.quit();
+    }
 }
