@@ -1,7 +1,7 @@
 package AI.Test.UITest;
 
-import AI.web.BasePage;
-import AI.web.WebManager;
+import AI.web.manager.BasePage;
+import AI.web.manager.WebManager;
 import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

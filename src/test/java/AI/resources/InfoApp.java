@@ -11,7 +11,7 @@ public class InfoApp {
      * Host,分别修改后面的数字即可
      */
     public static String TEST_HOST = TEST_HOST_3;
-    public static String DEVICES_HOST = TEST_HOST_3;
+    public static String DEVICES_HOST = TEST_HOST_1;
 
     //APP
     public static final String LOGIN = "http://"+ TEST_HOST + ":8083/app/userInfo";

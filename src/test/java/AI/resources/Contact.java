@@ -11,5 +11,7 @@ public class Contact {
     public static final String MANAGER_ASSWORD = "Aihuandian2021";
     public static final String MANAGER_AUTH = "8888";
 
+    public static final String AGENT_NAME = "13313778119";
+    public static final String AGENT_PASSWORD = "123456";
 
 }
