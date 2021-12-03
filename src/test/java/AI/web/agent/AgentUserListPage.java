@@ -12,9 +12,9 @@ public class AgentUserListPage extends AgentBasePage {
     }
 
     public AgentUserListPage searchUser() throws InterruptedException {
-        sendKeys(By.xpath(AgentWebInfo.USER_INPUT_SN_XPATH),"VX6LNBHIFFDFC1001025");
+        sendKeys(By.xpath(AgentWebInfo.USER_INPUT_SN_XPATH),"VX6LNBHIFFDFC5002458");
         click(By.xpath(AgentWebInfo.USER_SEARCH_BUTTON_XPATH));
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         Assert.assertEquals(getText(By.xpath(AgentWebInfo.USER_SEARCH_RESULT_OPERATION_XPATH)),"合作中");
         return this;
     }

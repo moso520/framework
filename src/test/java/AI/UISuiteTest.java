@@ -1,19 +1,19 @@
 package AI;
 
 
-import AI.Test.APPTest.SmsTest;
 import AI.Test.APPTest.UserDetailTest;
 import AI.Test.AgentTest;
+import AI.Test.UITest.AgentUITest;
+import AI.Test.UITest.ManagerUITest;
 import AI.Test.UserReportTest;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.platform.suite.api.SelectClasses;
-import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 /**
- * App+代理+综管接口自动化
+ * 代理+综管UI自动化
  */
 @RunWith(JUnitPlatform.class)
-@SelectClasses( { AgentTest.class, UserReportTest.class, UserDetailTest.class} )
-public class SuiteTest {
+@SelectClasses( {AgentUITest.class, ManagerUITest.class} )
+public class UISuiteTest {
 }

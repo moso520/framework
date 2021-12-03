@@ -11,10 +11,10 @@ public class AgentListPage extends BasePage{
     }
 
     public AgentListPage searchAgent() throws InterruptedException {
-        sendKeys(By.xpath(WebInfo.AGENT_INPUT_PHONE_XPATH),"17710245528");
+        sendKeys(By.xpath(WebInfo.AGENT_INPUT_PHONE_XPATH),"18132092207");
         click(By.xpath(WebInfo.AGENT_SEARCH_BUTTON_XPATH));
-        Thread.sleep(1000);
-        Assert.assertEquals(getText(By.xpath(WebInfo.AGENT_SEARCH_RESULT_NAME_XPATH)),"测试");
+        Thread.sleep(3000);
+        Assert.assertEquals(getText(By.xpath(WebInfo.AGENT_SEARCH_RESULT_NAME_XPATH)),"故障电池总仓");
         return this;
     }
 }

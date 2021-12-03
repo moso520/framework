@@ -21,7 +21,9 @@ public class DevicesTest {
     private static final Logger logger = LoggerFactory.getLogger(DevicesTest.class);
      Map<String, String> cookies = new HashMap<String, String>();
 
-
+    /**
+     * 查看Cabinet的版本
+     */
     @DisplayName("check Cabinet Version")
     @Test
     void checkCabinetVersion() {
@@ -40,7 +42,9 @@ public class DevicesTest {
         Allure.addAttachment("check Cabinet Version", response.asString());
     }
 
-
+    /**
+     * 查看Imei的版本
+     */
     @DisplayName("check Imei Version")
     @Test
     void checkImeiVersion() {
@@ -58,7 +62,9 @@ public class DevicesTest {
         Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("check Imei Version", response.asString());
     }
-
+    /**
+     * 关闭Cabinetsn
+     */
     @DisplayName("disable Cabinetsn")
     @Test
     void disableCabinetsn() {
@@ -78,7 +84,9 @@ public class DevicesTest {
         Assert.assertEquals(response.path("code").toString(),"109");
         Allure.addAttachment("disable Cabinetsn", response.asString());
     }
-
+    /**
+     * 打开Imei
+     */
     @DisplayName("open Imei")
     @Test
     void openImei() {
