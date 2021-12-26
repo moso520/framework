@@ -58,6 +58,7 @@ public class AgentTest {
     }*/
 
     @DisplayName("list all city for cabinetList")
+    @RepeatedTest(100)
     @Test
     void listCabineCity() {
         Response listResponse = HttpUtil.get(Info.LIST_CITY);

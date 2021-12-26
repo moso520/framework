@@ -38,4 +38,10 @@ public class Info {
     public static final String LIST_OWE_USER = TEST_HOST + "/api/v1/agent/report/owe/user/list?pageSize=10&pageNum=0";
     public static final String LIST_NEW_USER = TEST_HOST + "/api/v1/agent/report/new/user/list?pageSize=10&pageNum=0";
     public static final String LIST_EXCHANGE_USER = TEST_HOST + "/api/v1/agent/report/excharge/battery/list?pageSize=10&pageNum=0";
+
+    //逸池
+    private static final String YI_HOST = "https://test-wemp.yichio.com/";
+    public static final String YI_LOGIN = YI_HOST + "console/sys/admin/login";
+    public static final String YI_EQUIPMENT = YI_HOST + "console/equipment/pile/list?page=1&limit=10&includeDescendant=true&deleted=false&t=" + System.currentTimeMillis();
+    public static final String YI_USER = YI_HOST + "console/biz/user/list?page=1&limit=10&t=" + System.currentTimeMillis();
 }

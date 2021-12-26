@@ -13,8 +13,8 @@ public class InfoApp {
      * DEVICES_HOST是devices的HOST
      */
 
-    public static String TEST_HOST = TEST_HOST_3;
-    public static String DEVICES_HOST = TEST_HOST_4;
+    public static String TEST_HOST = TEST_HOST_1;
+    public static String DEVICES_HOST = TEST_HOST_3;
 
     //APP
     public static final String LOGIN = "http://"+ TEST_HOST + ":8083/app/userInfo";
