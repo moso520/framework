@@ -1,13 +1,10 @@
 package performance;
 
 
+import AI.Test.AgentTest.AgentTest;
 import AI.resources.Contact;
-import AI.resources.Info;
-import AI.util.HttpUtil;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeAll;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
@@ -24,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * 代理端测试类
  */
 public class AgentPerf {
-    private static final Logger logger = LoggerFactory.getLogger(AI.Test.AgentTest.class);
+    private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
     static String token;
 
@@ -58,7 +55,7 @@ public class AgentPerf {
     }
 
     //充电桩部署
-    @Test(threadPoolSize = 1, invocationCount = 10,  timeOut = 1000000)
+    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
     public void equipmentList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -75,7 +72,7 @@ public class AgentPerf {
     }
 
     //用户列表
-    @Test(threadPoolSize = 1, invocationCount = 10,  timeOut = 1000000)
+    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
     public void userList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();

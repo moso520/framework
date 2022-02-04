@@ -40,4 +40,20 @@ public class JsonBody {
             " \"phone\":\""+Contact.APP_PHONE+"\",\n" +
             " \"smsCode\":\""+Contact.SMS_DEFAULT_CODE+"\"\n" +
             "}";
+
+    public static String increaseAdjust = "{\n" +
+            " \"userId\":\""+Contact.PROD_YICHIO_TEST_USER_ID+"\",\n" +
+            " \"t\""+":"+System.currentTimeMillis()+",\n" +
+            " \"amount\":\"1\",\n" +
+            " \"type\":\"1\",\n" +
+            " \"remark\":\"increaseTest\"\n" +
+            "}";
+
+    public static String decreaseAdjust = "{\n" +
+            " \"userId\":\""+Contact.PROD_YICHIO_TEST_USER_ID+"\",\n" +
+            " \"t\""+":"+System.currentTimeMillis()+",\n" +
+            " \"amount\":\"1\",\n" +
+            " \"type\":\"-1\",\n" +
+            " \"remark\":\"decreaseTest\"\n" +
+            "}";
 }

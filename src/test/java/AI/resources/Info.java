@@ -40,8 +40,12 @@ public class Info {
     public static final String LIST_EXCHANGE_USER = TEST_HOST + "/api/v1/agent/report/excharge/battery/list?pageSize=10&pageNum=0";
 
     //逸池
-    private static final String YI_HOST = "https://test-wemp.yichio.com/";
+    private static final String YI_HOST = "https://wemp.ycyd.aihuandian.net/";
     public static final String YI_LOGIN = YI_HOST + "console/sys/admin/login";
     public static final String YI_EQUIPMENT = YI_HOST + "console/equipment/pile/list?page=1&limit=10&includeDescendant=true&deleted=false&t=" + System.currentTimeMillis();
     public static final String YI_USER = YI_HOST + "console/biz/user/list?page=1&limit=10&t=" + System.currentTimeMillis();
+    public static final String YI_CHANGE_ORDER = YI_HOST + "console/biz/changeOrder/list?page=1&limit=10&bizId=&status=&includeDescendant=true&isReturn=&datetime=&t=" + System.currentTimeMillis();
+    public static final String YI_WALLET_BALANCE_DETAIL = YI_HOST + "console/biz/walletBalanceDetail/list?page=1&limit=10&uid=&datetime=&t=" + System.currentTimeMillis();
+    public static final String YI_ADJUST = YI_HOST + "console/biz/wallet/adjust";
+
 }

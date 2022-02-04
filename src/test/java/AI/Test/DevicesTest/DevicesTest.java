@@ -1,7 +1,6 @@
-package AI.Test;
+package AI.Test.DevicesTest;
 
 import AI.resources.InfoApp;
-import AI.resources.JsonBody;
 import AI.util.AppHttpUtil;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;

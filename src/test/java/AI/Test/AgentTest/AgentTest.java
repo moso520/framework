@@ -1,4 +1,4 @@
-package AI.Test;
+package AI.Test.AgentTest;
 
 import AI.resources.Contact;
 import AI.resources.Info;
@@ -58,7 +58,7 @@ public class AgentTest {
     }*/
 
     @DisplayName("list all city for cabinetList")
-    @RepeatedTest(100)
+//    @RepeatedTest(100)
     @Test
     void listCabineCity() {
         Response listResponse = HttpUtil.get(Info.LIST_CITY);

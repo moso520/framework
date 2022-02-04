@@ -1,13 +1,11 @@
 package AI;
 
 
-import AI.Test.APPTest.SmsTest;
 import AI.Test.APPTest.UserDetailTest;
-import AI.Test.AgentTest;
-import AI.Test.UserReportTest;
+import AI.Test.AgentTest.AgentTest;
+import AI.Test.AgentTest.UserReportTest;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.platform.suite.api.SelectClasses;
-import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 /**

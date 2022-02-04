@@ -1,6 +1,6 @@
 package AI.util;
 
-import AI.Test.AgentTest;
+import AI.Test.AgentTest.AgentTest;
 import AI.resources.Contact;
 import AI.resources.Info;
 import io.qameta.allure.Allure;
@@ -135,6 +135,76 @@ public class HttpUtil {
                 ()->assertEquals("200",response.path("code").toString()),
                 ()->assertEquals("SUCCESS",response.path("message"))
         );
+        return response;
+    }
+
+    public static Response loginYCYD(){
+        String time = System.currentTimeMillis() +"";
+        Map<String, String> map = new LinkedHashMap<String,String>();
+        map.put("t",time);
+        map.put("username", Contact.PROD_YICHIO_NAME);
+        map.put("password",Contact.PROD_YICHIO_PASSWORD);
+        map.put("uuid", UUID.randomUUID().toString());
+        map.put("captcha",Contact.PROD_CAPTCHA);
+
+
+        Response response = given()
+                .contentType("application/json")
+                .body(map)
+                .post(Info.YI_LOGIN)
+                .then()
+                .log().body()
+                .extract()
+                .response();
+        assertAll("check response info",
+                ()->assertEquals("0",response.path("code").toString()),
+                ()->assertNotNull(response.path("token").toString()),
+                ()->assertEquals("success",response.path("msg"))
+        );
+        token = response.path("token").toString();
+        System.out.println(token);
+        Allure.addAttachment("login results-->token:", token);
+        return response;
+    }
+
+    public static Response getYCYD(String url){
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response response = given()
+                .when()
+                .headers(cookie)
+                .get(url)
+                .then()
+                .extract()
+                .response();
+        Allure.addAttachment("response:", response.asString());
+        assertAll("check response info",
+                ()->assertEquals("0",response.path("code").toString()),
+                ()->assertEquals("success",response.path("msg").toString())
+        );
+        logger.info(response.toString());
+        return response;
+    }
+
+    public static Response postYCYD(Map<String, Object> map, String url){
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response response = given()
+                .when()
+                .headers(cookie)
+                .contentType("application/json")
+                .body(map)
+                .post(url)
+                .then()
+                .extract()
+                .response();
+        Allure.addAttachment("response:", response.asString());
+        assertAll("check response info",
+                ()->assertEquals("0",response.path("code").toString()),
+                ()->assertEquals("success",response.path("msg").toString())
+        );
+        logger.info(response.toString());
         return response;
     }
 }

@@ -1,4 +1,4 @@
-package AI.Test;
+package AI.Test.AgentTest;
 
 import AI.resources.Contact;
 import AI.resources.Info;

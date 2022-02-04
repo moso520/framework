@@ -1,25 +1,24 @@
 package AI.util;
 
-import AI.Test.AgentTest;
-import AI.resources.Info;
+import AI.Test.AgentTest.AgentTest;
+import AI.resources.Contact;
 import AI.resources.InfoApp;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AppHttpUtil {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies = new HashMap<String, String>();
-
 
     public static Response get(Map<String, Object> map, String url){
         cookies.put("a","a");
@@ -121,4 +120,5 @@ public class AppHttpUtil {
         Allure.addAttachment("api--->", InfoApp.LOGIN);
         return response;
     }
+
 }

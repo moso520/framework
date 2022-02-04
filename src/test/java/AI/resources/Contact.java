@@ -17,7 +17,13 @@ public class Contact {
     //逸驰测试环境账号信息
     public static final String TEST_YICHIO_NAME = "john";
     public static final String TEST_YICHIO_PASSWORD = "1234567";
-    public static final String TEST_UUID = "fdaaa0fd-a5b2-467f-8a90-3da9965395b8";
     public static final String TEST_CAPTCHA = "test";
+
+    public static final String PROD_YICHIO_NAME = "13520119885";
+    public static final String PROD_YICHIO_PASSWORD = "aihuandian123";
+//    public static final String PROD_UUID = "23173a91-8011-45fb-8fe0-e0e00ea50b2a";
+    public static final String PROD_CAPTCHA = "PROD";
+    public static final String PROD_YICHIO_SEARCH_USER = "御纳户茶";
+    public static final String PROD_YICHIO_TEST_USER_ID = "333677614566678528";
 
 }
