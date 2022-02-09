@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * 代理端测试类
  */
-public class managerPerf {
+public class ManagerPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
     static String token;
