@@ -10,7 +10,7 @@ public class test {
     void test() throws UnsupportedEncodingException {
 //        String u = java.net.URLEncoder.encode("御纳户茶","UTF-8");
 //        System.out.println(u);
-        System.out.println(JsonBody.increaseAdjust);
+//        System.out.println(JsonBody.increaseAdjust);
 
     }
 }
