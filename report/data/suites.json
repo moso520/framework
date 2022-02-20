@@ -1,0 +1,100 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "AI.Test.APPTest.UserDetailTest",
+    "children" : [ {
+      "name" : "upload Basic Info",
+      "uid" : "40dcf3787df4d259",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419484022,
+        "stop" : 1644419493213,
+        "duration" : 9191
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "get Cabinet List",
+      "uid" : "ddf06a8d449b3701",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419493406,
+        "stop" : 1644419494759,
+        "duration" : 1353
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "get Deposit Amount",
+      "uid" : "7f34857321ae4e05",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419494770,
+        "stop" : 1644419494905,
+        "duration" : 135
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "group Grcode",
+      "uid" : "2631a454458b67ce",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419494914,
+        "stop" : 1644419495115,
+        "duration" : 201
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "get User Detail",
+      "uid" : "c4f668dbefbfb33d",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419495123,
+        "stop" : 1644419495256,
+        "duration" : 133
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "submit Certification",
+      "uid" : "6c0159a280f59867",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419495262,
+        "stop" : 1644419495386,
+        "duration" : 124
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "login App",
+      "uid" : "5a8aac6ffef1cea4",
+      "parentUid" : "e9ac59fafbff7dd27545d147f00a10a8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1644419495394,
+        "stop" : 1644419495560,
+        "duration" : 166
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "e9ac59fafbff7dd27545d147f00a10a8"
+  } ]
+}

@@ -1,0 +1,80 @@
+{
+  "uid" : "2631a454458b67ce",
+  "name" : "group Grcode",
+  "fullName" : "AI.Test.APPTest.UserDetailTest.groupGrcode",
+  "historyId" : "d20ded924c4c73e43ef47540e8146c3",
+  "time" : {
+    "start" : 1644419494914,
+    "stop" : 1644419495115,
+    "duration" : 201
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "1e4120b315f22baa",
+      "name" : "api--->",
+      "source" : "1e4120b315f22baa.txt",
+      "type" : "text/plain",
+      "size" : 51
+    }, {
+      "uid" : "c344ac69dadce323",
+      "name" : "group Grcode",
+      "source" : "c344ac69dadce323.txt",
+      "type" : "text/plain",
+      "size" : 34
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "6820@DESKTOP-LBAFN98.ForkJoinPool-1-worker-57(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "groupGrcode"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2631a454458b67ce.json",
+  "parameterValues" : [ ]
+}

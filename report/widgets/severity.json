@@ -1,0 +1,71 @@
+[ {
+  "uid" : "c4f668dbefbfb33d",
+  "name" : "get User Detail",
+  "time" : {
+    "start" : 1644419495123,
+    "stop" : 1644419495256,
+    "duration" : 133
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f34857321ae4e05",
+  "name" : "get Deposit Amount",
+  "time" : {
+    "start" : 1644419494770,
+    "stop" : 1644419494905,
+    "duration" : 135
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6c0159a280f59867",
+  "name" : "submit Certification",
+  "time" : {
+    "start" : 1644419495262,
+    "stop" : 1644419495386,
+    "duration" : 124
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "40dcf3787df4d259",
+  "name" : "upload Basic Info",
+  "time" : {
+    "start" : 1644419484022,
+    "stop" : 1644419493213,
+    "duration" : 9191
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a8aac6ffef1cea4",
+  "name" : "login App",
+  "time" : {
+    "start" : 1644419495394,
+    "stop" : 1644419495560,
+    "duration" : 166
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ddf06a8d449b3701",
+  "name" : "get Cabinet List",
+  "time" : {
+    "start" : 1644419493406,
+    "stop" : 1644419494759,
+    "duration" : 1353
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2631a454458b67ce",
+  "name" : "group Grcode",
+  "time" : {
+    "start" : 1644419494914,
+    "stop" : 1644419495115,
+    "duration" : 201
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

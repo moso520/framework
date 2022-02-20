@@ -1,0 +1,1 @@
+{"uuid":"4c8d2374-9625-44d4-8a2a-43a01d388fef","name":"performance.managerPerf","children":[],"befores":[{"name":"login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1644420288205,"stop":1644420293192}],"afters":[],"links":[],"start":1644420288134,"stop":1644420298242}

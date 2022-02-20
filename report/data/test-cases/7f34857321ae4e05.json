@@ -1,0 +1,80 @@
+{
+  "uid" : "7f34857321ae4e05",
+  "name" : "get Deposit Amount",
+  "fullName" : "AI.Test.APPTest.UserDetailTest.depositAmount",
+  "historyId" : "22cd4de4138259ac1773da06dfc095a1",
+  "time" : {
+    "start" : 1644419494770,
+    "stop" : 1644419494905,
+    "duration" : 135
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "39fe65c1117e3e83",
+      "name" : "api--->",
+      "source" : "39fe65c1117e3e83.txt",
+      "type" : "text/plain",
+      "size" : 45
+    }, {
+      "uid" : "bd2b12745b8fe243",
+      "name" : "get Deposit Amount",
+      "source" : "bd2b12745b8fe243.txt",
+      "type" : "text/plain",
+      "size" : 36
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "6820@DESKTOP-LBAFN98.ForkJoinPool-1-worker-57(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "depositAmount"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7f34857321ae4e05.json",
+  "parameterValues" : [ ]
+}

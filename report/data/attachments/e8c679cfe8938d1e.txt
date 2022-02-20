@@ -1,0 +1,1 @@
+http://172.20.146.170:8083/app/v3/swap/cabinet/list

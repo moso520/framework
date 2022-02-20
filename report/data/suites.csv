@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Feb 09 23:11:33 CST 2022","Wed Feb 09 23:11:34 CST 2022","1353","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","getCabinetList","get Cabinet List",""
+"passed","Wed Feb 09 23:11:35 CST 2022","Wed Feb 09 23:11:35 CST 2022","124","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","submitCertification","submit Certification",""
+"passed","Wed Feb 09 23:11:24 CST 2022","Wed Feb 09 23:11:33 CST 2022","9191","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","uploadBasicInfo","upload Basic Info",""
+"passed","Wed Feb 09 23:11:34 CST 2022","Wed Feb 09 23:11:35 CST 2022","201","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","groupGrcode","group Grcode",""
+"passed","Wed Feb 09 23:11:35 CST 2022","Wed Feb 09 23:11:35 CST 2022","166","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","loginApp","login App",""
+"passed","Wed Feb 09 23:11:34 CST 2022","Wed Feb 09 23:11:34 CST 2022","135","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","depositAmount","get Deposit Amount",""
+"passed","Wed Feb 09 23:11:35 CST 2022","Wed Feb 09 23:11:35 CST 2022","133","","AI.Test.APPTest.UserDetailTest","","AI.Test.APPTest.UserDetailTest","getUserDetail","get User Detail",""

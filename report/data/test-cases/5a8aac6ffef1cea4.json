@@ -1,0 +1,80 @@
+{
+  "uid" : "5a8aac6ffef1cea4",
+  "name" : "login App",
+  "fullName" : "AI.Test.APPTest.UserDetailTest.loginApp",
+  "historyId" : "f8f97118ef1c5277d04a7588282473dc",
+  "time" : {
+    "start" : 1644419495394,
+    "stop" : 1644419495560,
+    "duration" : 166
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "a659a0e132440e79",
+      "name" : "api--->",
+      "source" : "a659a0e132440e79.txt",
+      "type" : "text/plain",
+      "size" : 39
+    }, {
+      "uid" : "ddd4a4f06fd32b51",
+      "name" : "login results",
+      "source" : "ddd4a4f06fd32b51.txt",
+      "type" : "text/plain",
+      "size" : 41
+    } ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "DESKTOP-LBAFN98"
+  }, {
+    "name" : "thread",
+    "value" : "6820@DESKTOP-LBAFN98.ForkJoinPool-1-worker-57(12)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testClass",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginApp"
+  }, {
+    "name" : "suite",
+    "value" : "AI.Test.APPTest.UserDetailTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5a8aac6ffef1cea4.json",
+  "parameterValues" : [ ]
+}
