@@ -14,4 +14,5 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitPlatform.class)
 @SelectClasses( { AgentTest.class, UserReportTest.class, UserDetailTest.class} )
 public class SuiteTest {
+
 }
