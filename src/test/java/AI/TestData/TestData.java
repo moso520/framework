@@ -39,7 +39,7 @@ public class TestData {
 
 
     public static List<Map<String, String>> readYamlUtil() {
-        List<Map<String, String>> list = new ArrayList();
+        List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 //        ArrayList<HashMap<String, Object>> map = readYamlUtil();
 //        for (Map.Entry<String, Map<String, String>> me : map.entrySet()) {
 //            Map<String, String> numNameMapValue = me.getValue();
@@ -53,21 +53,21 @@ public class TestData {
 //        }
         return list;
     }
-
-    public static Map<String, ArrayList<HashMap<String, Object>>> getYamlList() {
-        Map<String, ArrayList<HashMap<String, Object>>> resultMap = null;
-        try {
-            Yaml yaml = new Yaml();
-            File f = new File("src/test/java/AI/resources/testdata.yaml");
-            //读入文件
-            resultMap = yaml.load(new FileInputStream(f));
-            System.out.println();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return resultMap;
-
-    }
+//todo
+//    public static Map<String, ArrayList<HashMap<String, Object>>> getYamlList() {
+//        Map<String, ArrayList<HashMap<String, Object>>> resultMap = null;
+//        try {
+//            Yaml yaml = new Yaml();
+//            File f = new File("src/test/java/AI/resources/testdata.yaml");
+//            //读入文件
+//            resultMap = yaml.load(new FileInputStream(f));
+//            System.out.println();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return resultMap;
+//
+//    }
 
 
 
