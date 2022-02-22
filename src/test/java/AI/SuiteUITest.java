@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
  */
 @RunWith(JUnitPlatform.class)
 @SelectClasses( {AgentUITest.class, ManagerUITest.class} )
-public class UISuiteTest {
+public class SuiteUITest {
 }

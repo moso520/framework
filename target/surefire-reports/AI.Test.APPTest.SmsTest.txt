@@ -1,4 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: AI.Test.APPTest.SmsTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.886 s - in AI.Test.APPTest.SmsTest
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in AI.Test.APPTest.SmsTest
+checkSms{TestData}  Time elapsed: 0.003 s  <<< ERROR!
+org.junit.platform.commons.PreconditionViolationException: Object must not be null
+
+checkSms{TestData}  Time elapsed: 0.005 s  <<< ERROR!
+org.junit.jupiter.api.extension.ParameterResolutionException: No ParameterResolver registered for parameter [AI.TestData.TestData arg0] in method [void AI.Test.APPTest.SmsTest.checkSms(AI.TestData.TestData)].
+
