@@ -1,0 +1,30 @@
+# Created at 2022-02-21T00:14:02.575
+二月 21, 2022 12:14:02 上午 org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+
+# Created at 2022-02-21T00:14:02.576
+信息: Loading JUnit Platform configuration parameters from classpath resource [file:/C:/Users/18302/IdeaProjects/framework/target/classes/junit-platform.properties].
+
+# Created at 2022-02-21T00:14:05.140
+二月 21, 2022 12:14:05 上午 org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder$DefensiveAnnotatedBuilder buildRunner
+
+# Created at 2022-02-21T00:14:05.141
+警告: Ignoring test class using JUnitPlatform runner: AI.SuiteTest
+
+# Created at 2022-02-21T00:14:05.249
+二月 21, 2022 12:14:05 上午 org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder$DefensiveAnnotatedBuilder buildRunner
+
+# Created at 2022-02-21T00:14:05.250
+警告: Ignoring test class using JUnitPlatform runner: AI.SuiteUITest
+
+# Created at 2022-02-21T00:14:05.902
+二月 21, 2022 12:14:05 上午 org.junit.jupiter.engine.discovery.MethodSelectorResolver resolve
+
+# Created at 2022-02-21T00:14:05.903
+警告: Possible configuration error: method [void AI.Test.APPTest.SmsTest.checkSms(AI.TestData.TestData)] resulted in multiple TestDescriptors [org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor, org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor]. This is typically the result of annotating a method with multiple competing annotations such as @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, etc.
+
+# Created at 2022-02-21T00:14:06.319
+二月 21, 2022 12:14:06 上午 org.junit.jupiter.engine.discovery.MethodSelectorResolver resolve
+
+# Created at 2022-02-21T00:14:06.320
+警告: Possible configuration error: method [void AI.Test.APPTest.SmsTest.checkSms(AI.TestData.TestData)] resulted in multiple TestDescriptors [org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor, org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor]. This is typically the result of annotating a method with multiple competing annotations such as @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, etc.
+

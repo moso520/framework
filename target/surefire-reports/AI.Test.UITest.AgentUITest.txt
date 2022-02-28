@@ -1,0 +1,169 @@
+-------------------------------------------------------------------------------
+Test set: AI.Test.UITest.AgentUITest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 19.244 s <<< FAILURE! - in AI.Test.UITest.AgentUITest
+login  Time elapsed: 1.555 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-LBAFN98', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00A83AB3+2505395]
+	Ordinal0 [0x00A1AE41+2076225]
+	Ordinal0 [0x00922498+1057944]
+	Ordinal0 [0x00940841+1181761]
+	Ordinal0 [0x0093C64B+1164875]
+	Ordinal0 [0x00939EBF+1154751]
+	Ordinal0 [0x0096A02F+1351727]
+	Ordinal0 [0x00969C9A+1350810]
+	Ordinal0 [0x009658BB+1333435]
+	Ordinal0 [0x009423E4+1188836]
+	Ordinal0 [0x0094323F+1192511]
+	GetHandleVerifier [0x00C0CB36+1554566]
+	GetHandleVerifier [0x00CB4A0C+2242396]
+	GetHandleVerifier [0x00B10E0B+523099]
+	GetHandleVerifier [0x00B0FEB0+519168]
+	Ordinal0 [0x00A202FD+2097917]
+	Ordinal0 [0x00A24388+2114440]
+	Ordinal0 [0x00A244C2+2114754]
+	Ordinal0 [0x00A2E041+2154561]
+	BaseThreadInitThunk [0x7634FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77B07A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77B07A6E+238]
+
+	at AI.Test.UITest.AgentUITest.login(AgentUITest.java:18)
+
+login  Time elapsed: 0.237 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-LBAFN98', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00A83AB3+2505395]
+	Ordinal0 [0x00A1AE41+2076225]
+	Ordinal0 [0x00922498+1057944]
+	Ordinal0 [0x00940841+1181761]
+	Ordinal0 [0x0093C64B+1164875]
+	Ordinal0 [0x00939EBF+1154751]
+	Ordinal0 [0x0096A02F+1351727]
+	Ordinal0 [0x00969C9A+1350810]
+	Ordinal0 [0x009658BB+1333435]
+	Ordinal0 [0x009423E4+1188836]
+	Ordinal0 [0x0094323F+1192511]
+	GetHandleVerifier [0x00C0CB36+1554566]
+	GetHandleVerifier [0x00CB4A0C+2242396]
+	GetHandleVerifier [0x00B10E0B+523099]
+	GetHandleVerifier [0x00B0FEB0+519168]
+	Ordinal0 [0x00A202FD+2097917]
+	Ordinal0 [0x00A24388+2114440]
+	Ordinal0 [0x00A244C2+2114754]
+	Ordinal0 [0x00A2E041+2154561]
+	BaseThreadInitThunk [0x7634FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77B07A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77B07A6E+238]
+
+	at AI.Test.UITest.ManagerUITest.login(ManagerUITest.java:19)
+
+searchAgent  Time elapsed: 0.718 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-LBAFN98', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00A83AB3+2505395]
+	Ordinal0 [0x00A1AE41+2076225]
+	Ordinal0 [0x00922498+1057944]
+	Ordinal0 [0x00940841+1181761]
+	Ordinal0 [0x0093C64B+1164875]
+	Ordinal0 [0x00939EBF+1154751]
+	Ordinal0 [0x0096A02F+1351727]
+	Ordinal0 [0x00969C9A+1350810]
+	Ordinal0 [0x009658BB+1333435]
+	Ordinal0 [0x009423E4+1188836]
+	Ordinal0 [0x0094323F+1192511]
+	GetHandleVerifier [0x00C0CB36+1554566]
+	GetHandleVerifier [0x00CB4A0C+2242396]
+	GetHandleVerifier [0x00B10E0B+523099]
+	GetHandleVerifier [0x00B0FEB0+519168]
+	Ordinal0 [0x00A202FD+2097917]
+	Ordinal0 [0x00A24388+2114440]
+	Ordinal0 [0x00A244C2+2114754]
+	Ordinal0 [0x00A2E041+2154561]
+	BaseThreadInitThunk [0x7634FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77B07A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77B07A6E+238]
+
+	at AI.Test.UITest.AgentUITest.searchAgent(AgentUITest.java:27)
+
+searchAgent  Time elapsed: 0.929 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-LBAFN98', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00A83AB3+2505395]
+	Ordinal0 [0x00A1AE41+2076225]
+	Ordinal0 [0x00922498+1057944]
+	Ordinal0 [0x00940841+1181761]
+	Ordinal0 [0x0093C64B+1164875]
+	Ordinal0 [0x00939EBF+1154751]
+	Ordinal0 [0x0096A02F+1351727]
+	Ordinal0 [0x00969C9A+1350810]
+	Ordinal0 [0x009658BB+1333435]
+	Ordinal0 [0x009423E4+1188836]
+	Ordinal0 [0x0094323F+1192511]
+	GetHandleVerifier [0x00C0CB36+1554566]
+	GetHandleVerifier [0x00CB4A0C+2242396]
+	GetHandleVerifier [0x00B10E0B+523099]
+	GetHandleVerifier [0x00B0FEB0+519168]
+	Ordinal0 [0x00A202FD+2097917]
+	Ordinal0 [0x00A24388+2114440]
+	Ordinal0 [0x00A244C2+2114754]
+	Ordinal0 [0x00A2E041+2154561]
+	BaseThreadInitThunk [0x7634FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77B07A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77B07A6E+238]
+
+	at AI.Test.UITest.ManagerUITest.searchAgent(ManagerUITest.java:28)
+
+searchUser  Time elapsed: 2.214 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 98.0.4758.102 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-LBAFN98', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_171'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00A83AB3+2505395]
+	Ordinal0 [0x00A1AE41+2076225]
+	Ordinal0 [0x00922498+1057944]
+	Ordinal0 [0x00940841+1181761]
+	Ordinal0 [0x0093C64B+1164875]
+	Ordinal0 [0x00939EBF+1154751]
+	Ordinal0 [0x0096A02F+1351727]
+	Ordinal0 [0x00969C9A+1350810]
+	Ordinal0 [0x009658BB+1333435]
+	Ordinal0 [0x009423E4+1188836]
+	Ordinal0 [0x0094323F+1192511]
+	GetHandleVerifier [0x00C0CB36+1554566]
+	GetHandleVerifier [0x00CB4A0C+2242396]
+	GetHandleVerifier [0x00B10E0B+523099]
+	GetHandleVerifier [0x00B0FEB0+519168]
+	Ordinal0 [0x00A202FD+2097917]
+	Ordinal0 [0x00A24388+2114440]
+	Ordinal0 [0x00A244C2+2114754]
+	Ordinal0 [0x00A2E041+2154561]
+	BaseThreadInitThunk [0x7634FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77B07A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77B07A6E+238]
+
+	at AI.Test.UITest.AgentUITest.searchUser(AgentUITest.java:36)
+

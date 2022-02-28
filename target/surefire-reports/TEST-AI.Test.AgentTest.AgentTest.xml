@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AI.Test.APPTest.UserDetailTest" time="18.743" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="AI.Test.AgentTest.AgentTest" time="17.738" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,11 +62,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="getCabinetList" classname="AI.Test.APPTest.UserDetailTest" time="0.355"/>
-  <testcase name="listNewUsers" classname="AI.Test.AgentTest.UserReportTest" time="0.141"/>
-  <testcase name="depositAmount" classname="AI.Test.APPTest.UserDetailTest" time="0.018"/>
-  <testcase name="groupGrcode" classname="AI.Test.APPTest.UserDetailTest" time="0.162"/>
-  <testcase name="getUserDetail" classname="AI.Test.APPTest.UserDetailTest" time="0.194"/>
-  <testcase name="submitCertification" classname="AI.Test.APPTest.UserDetailTest" time="0.129"/>
-  <testcase name="loginApp" classname="AI.Test.APPTest.UserDetailTest" time="0.162"/>
+  <testcase name="listCabineCity" classname="AI.Test.AgentTest.AgentTest" time="0.245"/>
+  <testcase name="listPackages" classname="AI.Test.AgentTest.AgentTest" time="0.168"/>
 </testsuite>

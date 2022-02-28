@@ -1,0 +1,12 @@
+# Created at 2022-02-23T00:11:59.452
+二月 23, 2022 12:11:59 上午 org.junit.platform.launcher.core.LauncherConfigurationParameters loadClasspathResource
+
+# Created at 2022-02-23T00:11:59.453
+信息: Loading JUnit Platform configuration parameters from classpath resource [file:/C:/Users/18302/IdeaProjects/framework/target/classes/junit-platform.properties].
+
+# Created at 2022-02-23T00:12:01.030
+二月 23, 2022 12:12:01 上午 org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder$DefensiveAnnotatedBuilder buildRunner
+
+# Created at 2022-02-23T00:12:01.030
+警告: Ignoring test class using JUnitPlatform runner: AI.SuiteTest
+
