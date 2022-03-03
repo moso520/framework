@@ -55,7 +55,8 @@ public class AgentTest {
 //    @RepeatedTest(100)
     @Test
     void listCabineCity() {
-        Response listResponse = HttpUtil.get(Info.LIST_CITY);
+//        Response listResponse = HttpUtil.get(Info.LIST_CITY);
+        Response listResponse = HttpUtil.get("aaaaa");
         Allure.addAttachment("list all city for cabinetList", listResponse.asString());
     }
 
