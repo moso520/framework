@@ -91,5 +91,14 @@ public class UserDetailTest {
         Allure.addAttachment("submit Certification", response.asString());
     }
 
+    @DisplayName("submit Certification")
+    @Test
+    void swap() {
+        Response response = AppHttpUtil.post(JsonBody.swapCabine,InfoApp.SWAP);
+        String s = response.asString();
+        Assert.assertEquals(response.path("suc").toString(),"true");
+        Allure.addAttachment("submit Certification", response.asString());
+    }
+
 
 }

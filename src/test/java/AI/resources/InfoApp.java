@@ -6,6 +6,7 @@ public class InfoApp {
     private static final String TEST_HOST_2 = "172.20.146.156";
     private static final String TEST_HOST_3 = "172.20.146.170";
     private static final String TEST_HOST_4 = "172.20.146.172";
+    private static final String TEST_HOST_QA = "172.20.146.159";
     public static final String USER_ID = "5c99d9e542cda600684bfc6a";
     /**
      * Host,分别修改后面的数字即可
@@ -13,7 +14,7 @@ public class InfoApp {
      * DEVICES_HOST是devices的HOST
      */
 
-    public static String TEST_HOST = TEST_HOST_3;
+    public static String TEST_HOST = TEST_HOST_QA;
     public static String DEVICES_HOST = TEST_HOST_3;
 
     //APP

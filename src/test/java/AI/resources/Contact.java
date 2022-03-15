@@ -20,7 +20,7 @@ public class Contact {
     public static final String TEST_CAPTCHA = "test";
 
     public static final String PROD_YICHIO_NAME = "13520119885";
-    public static final String PROD_YICHIO_PASSWORD = "aihuandian123";
+    public static final String PROD_YICHIO_PASSWORD = "12345678";
 //    public static final String PROD_UUID = "23173a91-8011-45fb-8fe0-e0e00ea50b2a";
     public static final String PROD_CAPTCHA = "PROD";
     public static final String PROD_YICHIO_SEARCH_USER = "御纳户茶";
