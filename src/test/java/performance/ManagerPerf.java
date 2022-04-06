@@ -54,12 +54,12 @@ public class ManagerPerf {
      * timeOut时间内需要执行完成，单位是ms
      * 如果在测试环境，需要修改app.aihuandian.net为测试环境域名，上面的login也需要替换
      */
-    @Test(threadPoolSize = 4, invocationCount = 40,  timeOut = 50000)
+    @Test(threadPoolSize = 4, invocationCount = 4,  timeOut = 50000)
     public void  performanceTest(){
         Response response = given().log().all()
                 .when()
                 .cookies(cookies)
-                .get("https://app.aihuandian.net/platform/record/exchangeBattery/v2?countPerPage=50&city=&state=&startTime=&endTime=&userId=157&msg=&curPage=0")
+                .get("https://172.20.146.157:8183/platform/record/exchangeBattery/v2?countPerPage=50&city=&state=&startTime=&endTime=&userId=157&msg=&curPage=0")
                 .then()
                 .extract()
                 .response();

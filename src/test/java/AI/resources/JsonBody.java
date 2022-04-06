@@ -25,7 +25,7 @@ public class JsonBody {
             "    \"holdIdCardImg\":\"456.jpg\"\n" +
             "}";
     public static String swapCabine = "{\n" +
-            "  \"userId\": \"17326075282\",\n" +
+            "  \"userId\": \"18302419810d7b8bf2144cb2\",\n" +
             "  \"cabinetSn\": \"ACAWDEA9L750A020\"\n" +
             "}";
 
