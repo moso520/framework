@@ -3,6 +3,7 @@ package performance;
 
 import AI.Test.AgentTest.AgentTest;
 import AI.resources.Contact;
+import AI.resources.Info;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
@@ -55,8 +56,8 @@ public class WeCUserPerf {
 //    }
 
     //当前用户状态
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test()
     public void userStatus() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -94,14 +95,19 @@ public class WeCUserPerf {
     @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
 //    @Test()
     public void outletList() {
+        Map<String, Object> map = new LinkedHashMap<String,Object>();
+        map.put("page", "1");
+        map.put("limit","20");
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
         cookie.put("authorization",token);
         Response responseGet = given()
-                .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/merchant/outlet/list")
+                .contentType("application/json")
+                .body(map)
+                .post("https://wemp.ycyd.aihuandian.net/merchant/outlet/list")
                 .then()
+                .log().body()
                 .extract()
                 .response();
         assertEquals("0",responseGet.path("code").toString());
@@ -112,16 +118,26 @@ public class WeCUserPerf {
     @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
 //    @Test()
     public void orderList() {
+        Map<String, Object> map = new LinkedHashMap<String,Object>();
+        map.put("status",0);
+        map.put("startTime", "2022-06-01 00:00:00");
+        map.put("endTime","2022-06-30 23:59:59");
+        map.put("page", "1");
+        map.put("limit","20");
+
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
         cookie.put("authorization",token);
         Response responseGet = given()
-                .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/charging/api/cabinet/order/list")
+                .contentType("application/json")
+                .body(map)
+                .post("https://wemp.ycyd.aihuandian.net/charging/api/cabinet/order/list")
                 .then()
+                .log().body()
                 .extract()
                 .response();
+
         assertEquals("0",responseGet.path("code").toString());
         Allure.addAttachment("list:", responseGet.asString());
     }
