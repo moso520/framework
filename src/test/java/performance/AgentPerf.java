@@ -39,7 +39,7 @@ public class AgentPerf {
         Response response = given()
                 .contentType("application/json")
                 .body(map)
-                .post("https://test-wemp.yichio.com/console/sys/admin/login")
+                .post("https://wemp.yichio.com/console/sys/admin/login")
                 .then()
                 .log().body()
                 .extract()
@@ -80,7 +80,7 @@ public class AgentPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://test-wemp.yichio.com/console/biz/user/list?page=1&limit=10&t=" + System.currentTimeMillis())
+                .get("https://wemp.yichio.com/console/biz/user/list?page=1&limit=10&t=" + System.currentTimeMillis())
                 .then()
                 .extract()
                 .response();

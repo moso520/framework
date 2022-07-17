@@ -56,8 +56,8 @@ public class WeCUserPerf {
 //    }
 
     //当前用户状态
-//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
-    @Test()
+    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 100000000)
+//    @Test()
     public void userStatus() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
