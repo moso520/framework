@@ -8,7 +8,6 @@ import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.LinkedHashMap;
@@ -20,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * tcp测试类
  */
-public class TCPPerf {
+public class WeAgentPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static String tokenStr;
 

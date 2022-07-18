@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class WeCUserPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
-    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjM3MzY1NzQwODMyNjU0MTMxMiIsImV4cCI6MTY1NjUzOTkxMiwidXVpZCI6IjdlMGVkZjFiMDA2YTQ3YWE4ZTE2Yzg4YzZlMTkwMDhjIiwidXNlcklkIjoiMzczNjU3NDA4MzA5NzY0MDk2In0.RIZn-N3PzScxYCrfbtlpA8kcHxDQpIj7AtzK_X3hk84";
+    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjQxNzc2ODYzMDE0MzM2MTAyNCIsImV4cCI6MTY1ODI0NTk0NSwidXVpZCI6ImUxYWQ0YmYzZmYxNDQyM2I4OTdhMjJkNzZkODcxNDZhIiwidXNlcklkIjoiMzMzNjc3NjE0NTY2Njc4NTI4In0.YVCMblidvXmB18GdCHuARRTecUBglK_tf7tXaBf70H8";
 
 //    @BeforeMethod
 //    public void login(){
@@ -56,8 +56,8 @@ public class WeCUserPerf {
 //    }
 
     //当前用户状态
-    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 100000000)
-//    @Test()
+//    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 100000000)
+    @Test()
     public void userStatus() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -101,7 +101,7 @@ public class WeCUserPerf {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
         cookie.put("authorization",token);
-        Response responseGet = given()
+        Response response = given()
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
@@ -110,8 +110,8 @@ public class WeCUserPerf {
                 .log().body()
                 .extract()
                 .response();
-        assertEquals("0",responseGet.path("code").toString());
-        Allure.addAttachment("list:", responseGet.asString());
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
     }
 
     //换电记录
@@ -128,7 +128,7 @@ public class WeCUserPerf {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
         cookie.put("authorization",token);
-        Response responseGet = given()
+        Response response = given()
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
@@ -138,8 +138,75 @@ public class WeCUserPerf {
                 .extract()
                 .response();
 
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+    }
+
+    //租赁合约
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test()
+    public void rentalList() {
+        Map<String, Object> map = new LinkedHashMap<String,Object>();
+        map.put("page", "1");
+        map.put("limit","10");
+
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("authorization",token);
+        Response response = given()
+                .headers(cookie)
+                .contentType("application/json")
+                .body(map)
+                .post("https://wemp.ycyd.aihuandian.net/ecommerce/rental/order/contract/current")
+                .then()
+                .log().body()
+                .extract()
+                .response();
+
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+    }
+
+    //电柜列表
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test()
+    public void rangeList() {
+        Map<String, Object> map = new LinkedHashMap<String,Object>();
+        map.put("latitude", "30.23696834676159");
+        map.put("longitude","120.19938217413683");
+
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("authorization",token);
+        Response response = given()
+                .headers(cookie)
+                .contentType("application/json")
+                .body(map)
+                .post("https://wemp.ycyd.aihuandian.net/merchant/outlet/listInRange")
+                .then()
+                .log().body()
+                .extract()
+                .response();
+
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+    }
+
+    //电池信息
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test()
+    public void equipmentDetail() {
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("authorization",token);
+        Response responseGet = given()
+                .when()
+                .headers(cookie)
+                .get("https://wemp.ycyd.aihuandian.net/charging/api/equipment/user/check")
+                .then()
+                .extract()
+                .response();
         assertEquals("0",responseGet.path("code").toString());
         Allure.addAttachment("list:", responseGet.asString());
     }
-
 }
