@@ -2,70 +2,120 @@ package performance;
 
 
 import AI.Test.AgentTest.AgentTest;
+import AI.resources.Info;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * tcp测试类
+ * 商家端测试类
  */
 public class WeAgentPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
-    static String tokenStr;
+    static Map<String, String> cookies;
+    static String token;
 
-    @BeforeClass
-    public static String login() {
-        String userName = "13261616956";
-        String password = "495E96059AFE031B55F30240F9AD47AF66081B9B";
-        String body = "{\n" +
-                "    \"captcha\": \"3bcd8\",\n" +
-                "    \"password\": \"123456\",\n" +
-                "    \"t\": 1653378196025,\n" +
-                "    \"username\": \"eric\",\n" +
-                "    \"uuid\": \"3e4d7a8a-d650-4489-88f7-45332cd3e34f\"\n" +
-                "}";
-        tokenStr = given().log().all()
+    @BeforeMethod
+    public void login(){
+        Map<String, Object> map = new LinkedHashMap<String,Object>();
+        map.put("username","13168789729");
+        map.put("password","12345678");
+        map.put("loginedMonth",true);
+
+
+        Response response = given()
                 .contentType("application/json")
-                .body(body)
-                .post("https://test-wemp.yichio.com/console/sys/admin/login")
+                .body(map)
+                .post("https://wemp.ycyd.aihuandian.net/console/sys/login")
                 .then()
                 .log().body()
                 .extract()
-                .response().path("token");
-        Assert.assertNotNull(tokenStr);
-        return tokenStr;
+                .response();
+        assertAll("check response info",
+                ()->assertEquals("0",response.path("code").toString()),
+                ()->assertNotNull(response.path("token").toString()),
+                ()->assertEquals("success",response.path("msg"))
+        );
+        token = response.path("token").toString();
+        System.out.println(token);
+        Allure.addAttachment("login results-->token:", token);
     }
 
-    //开仓
-    @Test(threadPoolSize = 20, invocationCount = 2000,  timeOut = 1000000)
-//    @Test()
-    public void turnOnTest() {
+    //换电订单
+//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void userOrderList() {
 
-        String body = "{\n" +
-                "    \"remark\": \"电池故障取电\",\n" +
-                "    \"cabinetId\": \"307988096627438888\",\n" +
-                "    \"slotSeq\": 2,\n" +
-                "    \"changeOrderId\": null\n" +
-                "}";
-        Map<String, String> token = new LinkedHashMap<String,String>();
-        token.put("token",tokenStr);
-
-        Response response = given().log().all()
-                .contentType("application/json")
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response responseGet = given()
                 .when()
-                .body(body)
-                .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/turnOn")
+                .headers(cookie)
+                .get("https://wemp.ycyd.aihuandian.net/console/biz/changeOrder/list?page=1&limit=10")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",responseGet.path("code").toString());
+        Allure.addAttachment("list:", responseGet.asString());
+    }
+
+    //电池列表
+//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void batteryList() {
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response responseGet = given()
+                .when()
+                .headers(cookie)
+                .get("https://wemp.ycyd.aihuandian.net/console/asset/battery/list?keyword=&page=1&limit=10")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",responseGet.path("code").toString());
+        Allure.addAttachment("list:", responseGet.asString());
+    }
+
+    //用户列表
+//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void userList() {
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response responseGet = given()
+                .when()
+                .headers(cookie)
+                .get("https://wemp.ycyd.aihuandian.net/console/biz/user/place/rent/contract/list?keyword=&page=1&limit=10")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",responseGet.path("code").toString());
+        Allure.addAttachment("list:", responseGet.asString());
+    }
+
+    //商家信息
+//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void profitList() {
+
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response response = given()
+                .when()
+                .headers(cookie)
+                .post("https://wemp.ycyd.aihuandian.net/console/operator/order/report/profit/summary")
                 .then()
                 .extract()
                 .response();
@@ -73,57 +123,21 @@ public class WeAgentPerf {
         Allure.addAttachment("list:", response.asString());
     }
 
-    //禁用舱门
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
-//    @Test()
-    public void disableSlotTest() {
+    //首页信息
+//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void menuList() {
 
-        String body = "{\n" +
-                "    \"remark\": \"其它原因:dadsadasdsa\",\n" +
-                "    \"cabinetId\": \"307988096627438888\",\n" +
-                "    \"slotSeq\": 6\n" +
-                "}";
-        Map<String, String> token = new LinkedHashMap<String,String>();
-        token.put("token",tokenStr);
-
-        Response response = given().log().all()
-                .contentType("application/json")
+        Map<String, String> cookie = new LinkedHashMap<String,String>();
+        cookie.put("token",token);
+        Response responseGet = given()
                 .when()
-                .body(body)
-                .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/disableSlot")
+                .headers(cookie)
+                .get("https://wemp.ycyd.aihuandian.net/console/sys/menu/nav")
                 .then()
                 .extract()
                 .response();
-        assertEquals("0",response.path("code").toString());
-        Allure.addAttachment("list:", response.asString());
-    }
-
-    //切换网关
-    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 1000000)
-//    @Test()
-    public void modifyServerAddressTest() {
-
-        String body = "{\n" +
-                "    \"ids\": [\n" +
-                "        \"307988096627438888\"\n" +
-                "    ],\n" +
-                "    \"ip\": \"192.168.0.47\",\n" +
-                "    \"port\": \"5097\"\n" +
-                "}";
-        Map<String, String> token = new LinkedHashMap<String,String>();
-        token.put("token",tokenStr);
-
-        Response response = given().log().all()
-                .contentType("application/json")
-                .when()
-                .body(body)
-                .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/modifyServerAddress")
-                .then()
-                .extract()
-                .response();
-        assertEquals("0",response.path("code").toString());
-        Allure.addAttachment("list:", response.asString());
+        assertEquals("0",responseGet.path("code").toString());
+        Allure.addAttachment("list:", responseGet.asString());
     }
 }

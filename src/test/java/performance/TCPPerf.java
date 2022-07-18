@@ -18,7 +18,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * tcp测试类
+ * 代理端测试类
  */
 public class TCPPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
@@ -48,7 +48,7 @@ public class TCPPerf {
     }
 
     //开仓
-    @Test(threadPoolSize = 20, invocationCount = 2000,  timeOut = 1000000)
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
 //    @Test()
     public void turnOnTest() {
 
@@ -73,6 +73,30 @@ public class TCPPerf {
         assertEquals("0",response.path("code").toString());
         Allure.addAttachment("list:", response.asString());
     }
+
+    //启用舱门
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test()
+    public void enableSlotTest() {
+
+        String body = "{\"remark\": \"仓门故障恢复\", \"cabinetId\": \"307988096627438888\", \"slotSeq\": 2}";
+        Map<String, String> token = new LinkedHashMap<String,String>();
+        token.put("token",tokenStr);
+
+        Response response = given().log().all()
+                .contentType("application/json")
+                .when()
+                .body(body)
+                .headers(token)
+                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/enableSlot")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+    }
+
+
 
     //禁用舱门
     @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
@@ -101,7 +125,7 @@ public class TCPPerf {
     }
 
     //切换网关
-    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 1000000)
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
 //    @Test()
     public void modifyServerAddressTest() {
 
@@ -126,5 +150,68 @@ public class TCPPerf {
                 .response();
         assertEquals("0",response.path("code").toString());
         Allure.addAttachment("list:", response.asString());
+    }
+
+    //更新二维码
+    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test()
+    public void updateQrCodeTest() {
+
+        String body = "{\"t\": 1658137652420, \"id\": \"6012419465472\", \"type\": \"SLOT\", \"targetId\": \"420662171820175360\"}";
+        Map<String, String> token = new LinkedHashMap<String,String>();
+        token.put("token",tokenStr);
+
+        Response response = given().log().all()
+                .contentType("application/json")
+                .when()
+                .body(body)
+                .headers(token)
+                .post("https://test-wemp.yichio.com/console/asset/qrCode/update")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+    }
+
+
+    //get Cabinet
+//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void  getCabinetTest(){
+        Map<String, String> token = new LinkedHashMap<String,String>();
+        token.put("token",tokenStr);
+
+        Response response = given().log().all()
+                .contentType("application/json")
+                .when()
+                .headers(token)
+                .get("https://test-wemp.yichio.com/console/asset/cabinet/runtime/info/421066265294614528")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+
+    }
+
+    //get Battery
+//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test
+    public void  getBatteryTest(){
+        Map<String, String> token = new LinkedHashMap<String,String>();
+        token.put("token",tokenStr);
+
+        Response response = given().log().all()
+                .contentType("application/json")
+                .when()
+                .headers(token)
+                .get("https://test-wemp.yichio.com/console/asset/battery/runtime/info/421073434341617664")
+                .then()
+                .extract()
+                .response();
+        assertEquals("0",response.path("code").toString());
+        Allure.addAttachment("list:", response.asString());
+
     }
 }
