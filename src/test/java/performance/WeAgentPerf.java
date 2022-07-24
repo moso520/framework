@@ -3,6 +3,7 @@ package performance;
 
 import AI.Test.AgentTest.AgentTest;
 import AI.resources.Info;
+import AI.resources.InfoYi;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
@@ -36,7 +37,7 @@ public class WeAgentPerf {
         Response response = given()
                 .contentType("application/json")
                 .body(map)
-                .post("https://wemp.ycyd.aihuandian.net/console/sys/login")
+                .post(InfoYi.YI_HOST + "/console/sys/login")
                 .then()
                 .log().body()
                 .extract()
@@ -52,7 +53,7 @@ public class WeAgentPerf {
     }
 
     //换电订单
-//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
     @Test
     public void userOrderList() {
 
@@ -61,7 +62,7 @@ public class WeAgentPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/console/biz/changeOrder/list?page=1&limit=10")
+                .get(InfoYi.YI_HOST + "/console/biz/changeOrder/list?page=1&limit=10")
                 .then()
                 .extract()
                 .response();
@@ -70,7 +71,7 @@ public class WeAgentPerf {
     }
 
     //电池列表
-//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
     @Test
     public void batteryList() {
 
@@ -79,7 +80,7 @@ public class WeAgentPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/console/asset/battery/list?keyword=&page=1&limit=10")
+                .get(InfoYi.YI_HOST + "/console/asset/battery/list?keyword=&page=1&limit=10")
                 .then()
                 .extract()
                 .response();
@@ -88,8 +89,8 @@ public class WeAgentPerf {
     }
 
     //用户列表
-//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
-    @Test
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+//    @Test
     public void userList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -97,7 +98,7 @@ public class WeAgentPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/console/biz/user/place/rent/contract/list?keyword=&page=1&limit=10")
+                .get(InfoYi.YI_HOST + "/console/biz/user/place/rent/contract/list?keyword=&page=1&limit=10")
                 .then()
                 .extract()
                 .response();
@@ -106,8 +107,8 @@ public class WeAgentPerf {
     }
 
     //商家信息
-//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
-    @Test
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+//    @Test
     public void profitList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -115,7 +116,7 @@ public class WeAgentPerf {
         Response response = given()
                 .when()
                 .headers(cookie)
-                .post("https://wemp.ycyd.aihuandian.net/console/operator/order/report/profit/summary")
+                .post(InfoYi.YI_HOST + "/console/operator/order/report/profit/summary")
                 .then()
                 .extract()
                 .response();
@@ -124,8 +125,8 @@ public class WeAgentPerf {
     }
 
     //首页信息
-//    @Test(threadPoolSize = 1, invocationCount = 200,  timeOut = 1000000)
-    @Test
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+//    @Test
     public void menuList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -133,7 +134,7 @@ public class WeAgentPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/console/sys/menu/nav")
+                .get(InfoYi.YI_HOST + "/console/sys/menu/nav")
                 .then()
                 .extract()
                 .response();

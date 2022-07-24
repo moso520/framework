@@ -4,6 +4,7 @@ package performance;
 import AI.Test.AgentTest.AgentTest;
 import AI.resources.Contact;
 import AI.resources.Info;
+import AI.resources.InfoYi;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
 import org.slf4j.Logger;
@@ -24,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class WeCUserPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
-    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjQxNzc2ODYzMDE0MzM2MTAyNCIsImV4cCI6MTY1ODI0NTk0NSwidXVpZCI6ImUxYWQ0YmYzZmYxNDQyM2I4OTdhMjJkNzZkODcxNDZhIiwidXNlcklkIjoiMzMzNjc3NjE0NTY2Njc4NTI4In0.YVCMblidvXmB18GdCHuARRTecUBglK_tf7tXaBf70H8";
+    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjM3MzY1NzQwODMyNjU0MTMxMiIsImV4cCI6MTY1ODY1NDYxMCwidXVpZCI6ImU0OWY3YTVjZGIwNjQwYTM4NzYyNTBmYzA4N2RkZjQzIiwidXNlcklkIjoiMzczNjU3NDA4MzA5NzY0MDk2In0.9UJ-eMJBIgV8tPAn3-eOQhifIiH30JofpwpVmbwYPhU";
 
 //    @BeforeMethod
 //    public void login(){
@@ -56,8 +57,8 @@ public class WeCUserPerf {
 //    }
 
     //当前用户状态
-//    @Test(threadPoolSize = 4, invocationCount = 2000,  timeOut = 100000000)
-    @Test()
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 100000000)
+//    @Test()
     public void userStatus() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -65,7 +66,7 @@ public class WeCUserPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/ecommerce/rental/order/contract/time/countdown?limit=1000&queryStatuses=0%2C1%2C2")
+                .get(InfoYi.YI_HOST + "/ecommerce/rental/order/contract/time/countdown?limit=1000&queryStatuses=0%2C1%2C2")
                 .then()
                 .extract()
                 .response();
@@ -74,7 +75,7 @@ public class WeCUserPerf {
     }
 
     //钱包信息
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 4000000)
 //    @Test()
     public void walletDetail() {
 
@@ -83,7 +84,7 @@ public class WeCUserPerf {
         Response responseGet = given()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/charging/api/wallet/detail")
+                .get(InfoYi.YI_HOST + "/charging/api/wallet/detail")
                 .then()
                 .extract()
                 .response();
@@ -92,7 +93,7 @@ public class WeCUserPerf {
     }
 
     //换电桩列表
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void outletList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
@@ -105,7 +106,7 @@ public class WeCUserPerf {
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
-                .post("https://wemp.ycyd.aihuandian.net/merchant/outlet/list")
+                .post(InfoYi.YI_HOST + "/merchant/outlet/list")
                 .then()
                 .log().body()
                 .extract()
@@ -115,7 +116,7 @@ public class WeCUserPerf {
     }
 
     //换电记录
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void orderList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
@@ -132,7 +133,7 @@ public class WeCUserPerf {
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
-                .post("https://wemp.ycyd.aihuandian.net/charging/api/cabinet/order/list")
+                .post(InfoYi.YI_HOST + "/charging/api/cabinet/order/list")
                 .then()
                 .log().body()
                 .extract()
@@ -143,7 +144,7 @@ public class WeCUserPerf {
     }
 
     //租赁合约
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void rentalList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
@@ -157,7 +158,7 @@ public class WeCUserPerf {
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
-                .post("https://wemp.ycyd.aihuandian.net/ecommerce/rental/order/contract/current")
+                .post(InfoYi.YI_HOST + "/ecommerce/rental/order/contract/current")
                 .then()
                 .log().body()
                 .extract()
@@ -168,7 +169,7 @@ public class WeCUserPerf {
     }
 
     //电柜列表
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void rangeList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
@@ -182,7 +183,7 @@ public class WeCUserPerf {
                 .headers(cookie)
                 .contentType("application/json")
                 .body(map)
-                .post("https://wemp.ycyd.aihuandian.net/merchant/outlet/listInRange")
+                .post(InfoYi.YI_HOST + "/merchant/outlet/listInRange")
                 .then()
                 .log().body()
                 .extract()
@@ -193,16 +194,16 @@ public class WeCUserPerf {
     }
 
     //电池信息
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 3001     , invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void equipmentDetail() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
         cookie.put("authorization",token);
-        Response responseGet = given()
+        Response responseGet = given().log().all()
                 .when()
                 .headers(cookie)
-                .get("https://wemp.ycyd.aihuandian.net/charging/api/equipment/user/check")
+                .get(InfoYi.YI_HOST + "/charging/api/equipment/user/all")
                 .then()
                 .extract()
                 .response();

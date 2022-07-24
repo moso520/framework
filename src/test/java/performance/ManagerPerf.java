@@ -54,7 +54,8 @@ public class ManagerPerf {
      * timeOut时间内需要执行完成，单位是ms
      * 如果在测试环境，需要修改app.aihuandian.net为测试环境域名，上面的login也需要替换
      */
-    @Test(threadPoolSize = 4, invocationCount = 4,  timeOut = 50000)
+//    @Test(threadPoolSize = 4, invocationCount = 4,  timeOut = 50000)
+    @Test
     public void  performanceTest(){
         Response response = given().log().all()
                 .when()

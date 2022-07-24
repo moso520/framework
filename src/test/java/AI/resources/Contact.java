@@ -15,8 +15,8 @@ public class Contact {
     public static final String AGENT_NAME = "19806690967";
     public static final String AGENT_PASSWORD = "1qazxsw2";
     //逸驰测试环境账号信息
-    public static final String TEST_YICHIO_NAME = "john";
-    public static final String TEST_YICHIO_PASSWORD = "1234567";
+    public static final String TEST_YICHIO_NAME = "Eric";
+    public static final String TEST_YICHIO_PASSWORD = "123456";
     public static final String TEST_CAPTCHA = "test";
 
     public static final String PROD_YICHIO_NAME = "13520119885";

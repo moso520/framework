@@ -48,7 +48,7 @@ public class TCPPerf {
     }
 
     //开仓
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void turnOnTest() {
 
@@ -75,7 +75,7 @@ public class TCPPerf {
     }
 
     //启用舱门
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void enableSlotTest() {
 
@@ -99,7 +99,7 @@ public class TCPPerf {
 
 
     //禁用舱门
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void disableSlotTest() {
 
@@ -125,7 +125,7 @@ public class TCPPerf {
     }
 
     //切换网关
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void modifyServerAddressTest() {
 
@@ -153,7 +153,7 @@ public class TCPPerf {
     }
 
     //更新二维码
-    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
 //    @Test()
     public void updateQrCodeTest() {
 
@@ -176,8 +176,8 @@ public class TCPPerf {
 
 
     //get Cabinet
-//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
-    @Test
+    @Test(threadPoolSize = 1, invocationCount = 300,  timeOut = 1000000)
+//    @Test
     public void  getCabinetTest(){
         Map<String, String> token = new LinkedHashMap<String,String>();
         token.put("token",tokenStr);
