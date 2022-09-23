@@ -6,10 +6,16 @@ import AI.resources.Info;
 import AI.resources.InfoYi;
 import io.qameta.allure.Allure;
 import io.restassured.response.Response;
+//import org.testng.annotations.Test;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -21,12 +27,13 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * 商家端测试类
  */
-public class WeAgentPerf {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class WeAgentPerfTest {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
     static String token;
 
-    @BeforeMethod
+    @BeforeEach
     public void login(){
         Map<String, Object> map = new LinkedHashMap<String,Object>();
         map.put("username","13168789729");

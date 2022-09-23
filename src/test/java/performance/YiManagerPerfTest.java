@@ -9,8 +9,8 @@ import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -22,12 +22,12 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * 管理端测试类
  */
-public class YiManagerPerf {
+public class YiManagerPerfTest {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
     static String token;
 
-    @BeforeMethod
+    @BeforeEach
     public void login() {
         String time = System.currentTimeMillis() + "";
         Map<String, String> map = new LinkedHashMap<String, String>();

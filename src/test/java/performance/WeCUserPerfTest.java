@@ -10,8 +10,9 @@ import io.restassured.response.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
+//import org.testng.annotations.Test;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * qishou 端测试类
  */
-public class WeCUserPerf {
+public class WeCUserPerfTest {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
     static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjM3MzY1NzQwODMyNjU0MTMxMiIsImV4cCI6MTY2NTI0MTI2MSwidXVpZCI6ImUyMTc3ZGE5OWRiNTRjZmI4YmE0MmVjOWM1ODI3ZTcyIiwidXNlcklkIjoiMzczNjU3NDA4MzA5NzY0MDk2In0.CbeeHn0amQFO-1FWHoKmsMrjKHL0p943cUJ_iJCeab4";
