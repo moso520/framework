@@ -20,12 +20,12 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * 代理端测试类
+ * qishou 端测试类
  */
 public class WeCUserPerf {
     private static final Logger logger = LoggerFactory.getLogger(AgentTest.class);
     static Map<String, String> cookies;
-    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjM3MzY1NzQwODMyNjU0MTMxMiIsImV4cCI6MTY1ODY1NDYxMCwidXVpZCI6ImU0OWY3YTVjZGIwNjQwYTM4NzYyNTBmYzA4N2RkZjQzIiwidXNlcklkIjoiMzczNjU3NDA4MzA5NzY0MDk2In0.9UJ-eMJBIgV8tPAn3-eOQhifIiH30JofpwpVmbwYPhU";
+    static String token = "eyJhbGciOiJIUzI1NiJ9.eyJpc1ZlcmlmeVBob25lIjp0cnVlLCJ0aGlyZEFjY291bnRJZCI6IjM3MzY1NzQwODMyNjU0MTMxMiIsImV4cCI6MTY2NTI0MTI2MSwidXVpZCI6ImUyMTc3ZGE5OWRiNTRjZmI4YmE0MmVjOWM1ODI3ZTcyIiwidXNlcklkIjoiMzczNjU3NDA4MzA5NzY0MDk2In0.CbeeHn0amQFO-1FWHoKmsMrjKHL0p943cUJ_iJCeab4";
 
 //    @BeforeMethod
 //    public void login(){
@@ -57,8 +57,8 @@ public class WeCUserPerf {
 //    }
 
     //当前用户状态
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 100000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void userStatus() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -75,8 +75,8 @@ public class WeCUserPerf {
     }
 
     //钱包信息
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 4000000)
-//    @Test()
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void walletDetail() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -93,8 +93,8 @@ public class WeCUserPerf {
     }
 
     //换电桩列表
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void outletList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
         map.put("page", "1");
@@ -116,8 +116,8 @@ public class WeCUserPerf {
     }
 
     //换电记录
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void orderList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
         map.put("status",0);
@@ -144,8 +144,8 @@ public class WeCUserPerf {
     }
 
     //租赁合约
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void rentalList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
         map.put("page", "1");
@@ -169,8 +169,8 @@ public class WeCUserPerf {
     }
 
     //电柜列表
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void rangeList() {
         Map<String, Object> map = new LinkedHashMap<String,Object>();
         map.put("latitude", "30.23696834676159");
@@ -194,8 +194,8 @@ public class WeCUserPerf {
     }
 
     //电池信息
-    @Test(threadPoolSize = 3001     , invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void equipmentDetail() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();

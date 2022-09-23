@@ -89,8 +89,8 @@ public class WeAgentPerf {
     }
 
     //用户列表
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void userList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -107,8 +107,8 @@ public class WeAgentPerf {
     }
 
     //商家信息
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void profitList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();
@@ -125,8 +125,8 @@ public class WeAgentPerf {
     }
 
     //首页信息
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void menuList() {
 
         Map<String, String> cookie = new LinkedHashMap<String,String>();

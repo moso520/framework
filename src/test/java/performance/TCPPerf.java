@@ -38,7 +38,7 @@ public class TCPPerf {
         tokenStr = given().log().all()
                 .contentType("application/json")
                 .body(body)
-                .post("https://test-wemp.yichio.com/console/sys/admin/login")
+                .post("https://wemp.yichio.com/console/sys/admin/login")
                 .then()
                 .log().body()
                 .extract()
@@ -48,8 +48,8 @@ public class TCPPerf {
     }
 
     //开仓
-    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void turnOnTest() {
 
         String body = "{\n" +
@@ -66,7 +66,7 @@ public class TCPPerf {
                 .when()
                 .body(body)
                 .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/turnOn")
+                .post("https://wemp.yichio.com/console/asset/cabinet/instr/turnOn")
                 .then()
                 .extract()
                 .response();
@@ -75,8 +75,8 @@ public class TCPPerf {
     }
 
     //启用舱门
-    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void enableSlotTest() {
 
         String body = "{\"remark\": \"仓门故障恢复\", \"cabinetId\": \"307988096627438888\", \"slotSeq\": 2}";
@@ -88,7 +88,7 @@ public class TCPPerf {
                 .when()
                 .body(body)
                 .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/enableSlot")
+                .post("https://wemp.yichio.com/console/asset/cabinet/instr/enableSlot")
                 .then()
                 .extract()
                 .response();
@@ -99,8 +99,8 @@ public class TCPPerf {
 
 
     //禁用舱门
-    @Test(threadPoolSize = 100, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void disableSlotTest() {
 
         String body = "{\n" +
@@ -116,7 +116,7 @@ public class TCPPerf {
                 .when()
                 .body(body)
                 .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/disableSlot")
+                .post("https://wemp.yichio.com/console/asset/cabinet/instr/disableSlot")
                 .then()
                 .extract()
                 .response();
@@ -125,8 +125,8 @@ public class TCPPerf {
     }
 
     //切换网关
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void modifyServerAddressTest() {
 
         String body = "{\n" +
@@ -144,7 +144,7 @@ public class TCPPerf {
                 .when()
                 .body(body)
                 .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/cabinet/instr/modifyServerAddress")
+                .post("https://wemp.yichio.com/console/asset/cabinet/instr/modifyServerAddress")
                 .then()
                 .extract()
                 .response();
@@ -153,8 +153,8 @@ public class TCPPerf {
     }
 
     //更新二维码
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test()
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void updateQrCodeTest() {
 
         String body = "{\"t\": 1658137652420, \"id\": \"6012419465472\", \"type\": \"SLOT\", \"targetId\": \"420662171820175360\"}";
@@ -166,7 +166,7 @@ public class TCPPerf {
                 .when()
                 .body(body)
                 .headers(token)
-                .post("https://test-wemp.yichio.com/console/asset/qrCode/update")
+                .post("https://wemp.yichio.com/console/asset/qrCode/update")
                 .then()
                 .extract()
                 .response();
@@ -176,8 +176,8 @@ public class TCPPerf {
 
 
     //get Cabinet
-    @Test(threadPoolSize = 1, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void  getCabinetTest(){
         Map<String, String> token = new LinkedHashMap<String,String>();
         token.put("token",tokenStr);
@@ -186,7 +186,7 @@ public class TCPPerf {
                 .contentType("application/json")
                 .when()
                 .headers(token)
-                .get("https://test-wemp.yichio.com/console/asset/cabinet/runtime/info/421066265294614528")
+                .get("https://wemp.yichio.com/console/asset/cabinet/runtime/info/421066265294614528")
                 .then()
                 .extract()
                 .response();
@@ -196,7 +196,7 @@ public class TCPPerf {
     }
 
     //get Battery
-//    @Test(threadPoolSize = 4, invocationCount = 200,  timeOut = 1000000)
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
     @Test
     public void  getBatteryTest(){
         Map<String, String> token = new LinkedHashMap<String,String>();
@@ -206,7 +206,7 @@ public class TCPPerf {
                 .contentType("application/json")
                 .when()
                 .headers(token)
-                .get("https://test-wemp.yichio.com/console/asset/battery/runtime/info/421073434341617664")
+                .get("https://wemp.yichio.com/console/asset/battery/runtime/info/421073434341617664")
                 .then()
                 .extract()
                 .response();

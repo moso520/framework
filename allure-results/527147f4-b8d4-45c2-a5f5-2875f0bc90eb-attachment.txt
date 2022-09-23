@@ -1,1 +1,0 @@
-http://121.89.244.241:8083/app/deposit/amount

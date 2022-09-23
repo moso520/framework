@@ -57,8 +57,8 @@ public class YiManagerPerf {
     }
 
     //电池列表
-    @Test(threadPoolSize = 1, invocationCount = 300,  timeOut = 100000000)
-//    @Test
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void batteryList() {
 
         Map<String, String> cookie = new LinkedHashMap<String, String>();
@@ -76,8 +76,8 @@ public class YiManagerPerf {
 
 
     //充电桩部署
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void equipmentList() {
 
         Map<String, String> cookie = new LinkedHashMap<String, String>();
@@ -94,8 +94,8 @@ public class YiManagerPerf {
     }
 
     //用户列表
-    @Test(threadPoolSize = 100, invocationCount = 300, timeOut = 1000000)
-//    @Test
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void userList() {
 
         Map<String, String> cookie = new LinkedHashMap<String, String>();
@@ -112,8 +112,8 @@ public class YiManagerPerf {
     }
 
     //租赁合约管理
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+    //    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void descendantsList() {
 
         Map<String, String> cookie = new LinkedHashMap<String, String>();
@@ -130,8 +130,8 @@ public class YiManagerPerf {
     }
 
     //租赁合约update
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void update(){
         Map<String, String> cookie = new LinkedHashMap<String, String>();
         cookie.put("token", token);
@@ -158,8 +158,8 @@ public class YiManagerPerf {
     }
 
     //门店管理
-    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
-//    @Test
+//    @Test(threadPoolSize = 300, invocationCount = 300,  timeOut = 1000000)
+    @Test
     public void outletList() {
 
         Map<String, String> cookie = new LinkedHashMap<String, String>();

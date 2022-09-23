@@ -1,7 +1,0 @@
-#方法
-methods:
-  search:
-    steps:
-      - id: search_input_text
-  cancel:
-
